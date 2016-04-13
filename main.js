@@ -1,3 +1,4 @@
+console.log('im ready');
 new Promise(function(resolve) {
 	if (document.readyState === 'complete') {
 		resolve();
