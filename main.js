@@ -15,7 +15,7 @@ new Promise(function(resolve) {
 			if(response.session) {
 				id.textContent = response.session.mid;
 			} else {
-				id.textContent = 'Нет АйДи'ж	
+				id.textContent = 'Нет АйДи';	
 			}
 		});
 	});
