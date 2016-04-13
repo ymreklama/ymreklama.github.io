@@ -13,8 +13,9 @@ new Promise(function(resolve) {
 
 		VK.Auth.getLoginStatus(function(response) {
 			if(response.session) {
-				console.log(response.session);
-				alert('твой id:' + response.session.mid);
+				id.textContent = response.session.mid;
+			} else {
+				id.textContent = 'Нет АйДи'ж	
 			}
 		});
 	});
