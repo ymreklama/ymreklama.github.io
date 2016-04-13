@@ -8,7 +8,7 @@ new Promise(function(resolve) {
 }).then(function() {
 	return new Promise(function(resolve, reject) {
 		VK.init({
-			apiId: 5384604
+			apiId: 5413391
 		});
 
 		VK.Auth.getLoginStatus(function(response) {
