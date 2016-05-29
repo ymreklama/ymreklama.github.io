@@ -1,0 +1,7 @@
+body {
+  min-width: 1024px;
+}
+.mainslider video,
+.mainslider object {
+  height: 231px !important;
+}

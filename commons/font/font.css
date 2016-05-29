@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'dinregular';
+    src: url('din-regular-1361534659-webfont.eot');
+    src: url('din-regular-1361534659-webfont.eot?#iefix') format('embedded-opentype'),
+         url('din-regular-1361534659-webfont.woff2') format('woff2'),
+         url('din-regular-1361534659-webfont.woff') format('woff'),
+         url('din-regular-1361534659-webfont.ttf') format('truetype'),
+         url('din-regular-1361534659-webfont.svg#dinregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
