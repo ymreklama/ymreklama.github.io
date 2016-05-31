@@ -464,8 +464,12 @@ nav.mobile-nav{
 	background-color: $text;
 	position: absolute;
 	right: 0;
-	top:100px;
+	top: 0;
 	display: none;
+	width: 100%;
+}
+nav.mobile-nav > ul.first-level {
+	margin-top: 50px;
 }
 nav.mobile-nav > ul.first-level li{
 	list-style: none;
@@ -493,18 +497,22 @@ nav.mobile-nav > ul.first-level > li > ul.second-level{
 
 /*menu icon*/
 header.main-header .menu-icon{
+	position: relative;
 	float:left;
 	cursor: pointer;
-	margin-top: 41.5px; /* (100 - 17) / 2 (17px is the icon's height) */
+	margin-top: 25px; /* (100 - 17) / 2 (17px is the icon's height) */
 	display:none;
 	&:hover .line.line-2 {
 		width: 25px;
 	}
 	&.open .line {
 		width: 30px !important;
+		background-color: white;
+		box-shadow: none;
 	}
 }
 header.main-header .menu-icon .line{
+	box-shadow: 0 0 5px 0 white;
 	height: 1px;
 	width: 30px;
 	background-color: $text;
@@ -517,6 +525,15 @@ header.main-header .menu-icon .line:nth-child(2){
 }
 header.main-header .menu-icon .line:last-child{width: 20px;}
 @media (max-width: 991px) {
+	.is-sticky {
+		.main-header {
+			background: transparent;
+			box-shadow: none;
+				.logo img.logo-stuck {
+				display: none;
+			}
+		}
+	}
 	header.main-header .menu-icon{display: block;}
 }
 
@@ -591,6 +608,7 @@ footer.main-footer nav.footer-nav ul li a{
 	height: 100%;
 	text-align: center;
 	background:gray;
+	overflow: hidden;
 }
 .main-slider__item img {
 	position: absolute;
