@@ -4,7 +4,7 @@
 	<title>Яркий мир</title>
 	<!-- META TAGS -->
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width">
 	<link rel="shortcut icon" type="image/x-icon" href="assets/img/ym.ico">
 	<meta name="author" content="Яркий мир">
 	<meta name="description" content="Яркий мир. Рекламно-производственная компания">
@@ -12,6 +12,7 @@
 	<!-- STYLES -->
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="assets/css/ionicons.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="assets/css/flexslider.css">
 	<link rel="stylesheet" href="assets/css/animsition.min.css">
 	<link rel="stylesheet" href="assets/css/animate.css">
@@ -49,7 +50,7 @@
 								<li><a href="single-post.html" class="animsition-link">single post</a></li>
 							</ul>
 						</li> -->
-						<li><a href="portfolio-1.html" class="animsition-link">Заказать</a></li>
+						<li><a href="portfolio-1.html" class="animsition-link">Работы</a></li>
 						<li><a href="contact.html" class="animsition-link">Контакты</a></li>
 					</ul>
 				</nav>
@@ -398,7 +399,8 @@
 				<div class="col-md-8 wow fadeInLeft">
 					<div id="map"></div>
 				</div>
-				<div class="col-md-4 wow fadeInRight" style="background-color: gray; height: 400px;" >
+				<div class="col-md-4 wow fadeInRight">
+					<div id="vk_groups"></div>
 				</div>
 			</div>
 		</div>
@@ -411,8 +413,8 @@
 			<div class="col-md-6 col-sm-12">
 				<div class="row">
 
-					<span class="white-text montserrat-text uppercase" style="font-size:30px;display:block;">
-						Хотите поработать с нами? Напишите нам
+					<span class="white-text montserrat-text uppercase" style="font-size:26px;display:block;">
+						Для заказа, просто напишите нам, мы ответим в ближайшее время
 					</span>
 					<h4 class="montserrat-text uppercase white-text" style="margin-top:50px">Наши Контакты</h4>
 					<p class="white-text">
@@ -424,8 +426,8 @@
 					</p>
 
 					<ul class="social-icons" style="margin-top:30px;">
-						<li><a href="#"><i class="icon ion-social-vk"></i></a></li>
-						<li><a href="#"><i class="icon ion-social-instagram"></i></a></li>
+						<li><a href="https://vk.com/ym.omsk"><i class="fa fa-vk"></i></a></li>
+						<li><a href="https://www.instagram.com/ym.omsk"><i class="fa fa-instagram"></i></a></li>
 					</ul>
 				</div>
 			</div>
@@ -479,7 +481,7 @@
 							<li><a href="index.html" class="animsition-link link">Главная</a></li>
 							<li><a href="about.html" class="animsition-link link">О Нас</a></li>
 							<li><a href="services.html" class="animsition-link link">Услуги</a></li>
-							<li><a href="portfolio-1.html" class="animsition-link link">Заказать</a></li>
+							<li><a href="portfolio-1.html" class="animsition-link link">Работы</a></li>
 							<li><a href="contact.html" class="animsition-link link">Контакты</a></li>
 						</ul>
 					</nav>
@@ -492,12 +494,8 @@
 						Яркий Мир &copy;2016. all rights reserved.
 					</div>
 					<ul class="social-icons" style="margin-top:30px;float:right">
-						<li><a href="#"><i class="icon-ion-android-checkbox-outline:before"></i></a></li>
-						<li><a href="#"><i class="icon ion-social-vk"></i></a></li>
-						<li><a href="#"><i class="icon ion-social-youtube"></i></a></li>
-						<li><a href="#"><i class="icon ion-social-linkedin"></i></a></li>
-						<li><a href="#"><i class="icon ion-social-pinterest"></i></a></li>
-						<li><a href="#"><i class="icon ion-social-instagram"></i></a></li>
+						<li><a href="https://vk.com/ym.omsk"><i class="fa fa-vk"></i></a></li>
+						<li><a href="https://www.instagram.com/ym.omsk"><i class="fa fa-instagram"></i></a></li>
 					</ul>
 				</div>
 			</div>
@@ -524,13 +522,15 @@
 			// initialise flexslider
 			$('.main-slider').flexslider({
 				animation: "fade",
-				directionNav: false,
+				directionNav: true,
 				controlNav: false, 
 				keyboardNav: true,
 				slideToStart: 0,
 				animationLoop: true,
 				pauseOnHover: false,
-				slideshowSpeed: 4000, 
+				slideshowSpeed: 4000,
+				prevText: '',
+				nextText: ''
 			});
 
 
@@ -570,14 +570,17 @@
 		            iconLayout: 'default#image',
 		            iconImageHref: 'assets/img/map.png',
 		            // Размеры метки.
-		            iconImageSize: [30, 42],
+		            iconImageSize: [63, 49],
 		            // Смещение левого верхнего угла иконки относительно
 		            // её "ножки" (точки привязки).
-		            iconImageOffset: [0, -40]
+		            iconImageOffset: [-20, -45]
 		        });
 
 		    myMap.geoObjects.add(myPlacemark);
 		});
+	</script>
+	<script type="text/javascript">
+		VK.Widgets.Group("vk_groups", {mode: 2, width: "360", height: "400", color1: "43c0f6", color3: "43c0f6"}, 54032024);
 	</script>
 
 <!--	

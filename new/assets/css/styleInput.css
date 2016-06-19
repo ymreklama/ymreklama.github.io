@@ -66,6 +66,12 @@ section{
 .green-section{
 	background-color:$cyan;
 	box-shadow: 0 0 10px 0 $text;
+	.social-icons a {
+		color: white;
+	}
+	.social-icons a:hover {
+		color: #999999;
+	}
 }
 .white-section{
 	background-color:#fff;
@@ -107,7 +113,7 @@ a.link:after{
 			transition:all .2s ease-in-out;
 }
 a:hover, a:focus{
-	color:$text;
+	color:#999999;
 	text-decoration: none;
 }
 a:hover:after{
@@ -734,6 +740,23 @@ footer.main-footer nav.footer-nav ul li a{
 	line-height: 30px;
 	color:#999999;
 }
+.downoad-price__container {
+	text-align: center;
+}
+.download-price {
+	display: inline-block;
+	text-align: center;
+	font-size: 24px;
+	color: $text;
+	padding: 10px 40px;
+	border: 10px solid $magenta; 
+	margin-bottom: 15px;
+
+	&:hover {
+		color: white;
+		background:$magenta;
+	}
+}
 @media (max-width: 991px) {
 	.services .services-left{text-align: center;margin-bottom: 50px;}
 }
@@ -787,7 +810,7 @@ footer.main-footer nav.footer-nav ul li a{
 	top:0;
 	left: 0;
 	height: 100%;
-	width: 100%;
+	width: 101%;
 	background-color: rgba(255,255,255,.7);
 	-webkit-transform:translateX(-100%);
 	        transform:translateX(-100%);
@@ -1076,67 +1099,25 @@ footer.main-footer nav.footer-nav ul li a{
 
 
 /* ##### 08 : TEAM STYLES  ##### */
-.team_member{
-	margin-bottom: 30px;
-	position: relative;
-	overflow: hidden;
+.team_member {
+	height: 200px;
 }
-.team_member .team_member_hover{
-	position: absolute;
-	top:0;
-	left: 0;
-	height: 100%;
-	width: 100%;
-	background-color: rgba(255,255,255,.8);
-	padding: 20px;
-	opacity: 0;
-	-webkit-transition:all .2s ease-in-out;
-			transition:all .2s ease-in-out;
-}
-.team_member .team_member_hover .team_member_info{
-	position: absolute;
-	top:50%;
-	left: 50%;
-	-webkit-transform:translate(-50%, -50%);
-	        transform:translate(-50%, -50%);
+.team_member_info {
 	text-align: center;
-	width: 100%;
 }
-.team_member .team_member_hover .team_member_info .team_member_name{
-	font-family: "Montserrat", sans-serif;
+.team_member_name {
+	font-size: 22px;
 	font-weight: 700;
-	font-size: 12px;
-	color:$text;	
-	text-transform: uppercase;
-	-webkit-transition:all .2s ease-in-out .2s;
-	transition:all .2s ease-in-out .2s;
-	-webkit-transform:translateY(20px);
-	        transform:translateY(20px);
-	opacity: 0;
 }
-.team_member .team_member_hover .team_member_info .team_member_job{
+.team_member_job {
+	padding: 5px 10px;
+	background:$cyan;
+	color: white;
+	font-size: 18px;
+}
+.team_member_phone {
 	display: inline-block;
-	margin-top: 10px;
-	background-color: $cyan;
-	padding: 5px;
-	font-family: "Montserrat", sans-serif;
-	font-weight: 700;
-	font-size: 12px;
-	text-transform: uppercase;
-	color:white;
-	-webkit-transition:all .2s ease-in-out .3s;
-	transition:all .2s ease-in-out .3s;
-	-webkit-transform:translateY(20px);
-	        transform:translateY(20px);
-	opacity: 0;
-}
-.team_member:hover .team_member_hover{
-	opacity: 1;
-}
-.team_member:hover .team_member_info .team_member_name, .team_member:hover .team_member_info .team_member_job{
-	-webkit-transform:translateY(0);
-	        transform:translateY(0);
-	opacity: 1;
+	font-size: 18px;
 }
 
 
@@ -1331,9 +1312,49 @@ footer.main-footer nav.footer-nav ul li a{
 	-webkit-transform:translateX(-10px);
 	        transform:translateX(-10px);
 }
-
 #map {
 	width: 100%;
 	max-height: 70vh;
 	height: 400px;
+	box-shadow: 0 0 3px 0 gray;
+	transition: .3s;
+	margin-bottom: 30px;
+	&:hover {
+		box-shadow: 0 0 7px 0 gray;
+	}
+}
+#vk_groups {
+	box-shadow: 0 0 3px 0 gray;
+	transition: .3s;
+	width: 100% !important;
+	&:hover {
+		box-shadow: 0 0 7px 0 gray;
+	}
+	iframe {
+		width: 100%;
+	}
+	
+}
+.flex-direction-nav a {
+	top: 50%;
+	border-top: 30px solid transparent;
+	border-bottom: 30px solid transparent;
+	opacity: .7;
+
+	&:hover {
+		opacity: 1;
+	}
+
+	&.flex-next {
+		border-left: 15px solid $cyan;
+	}
+
+	&.flex-prev {
+		border-right: 15px solid $cyan;
+	}
+
+	&:before {
+		display: none;
+		content: '';
+	}
 }
